@@ -1,0 +1,5 @@
+
+<app-img  [img]="product.image" ></app-img>
+<h2>{{ product.price | currency: 'BOB' }}</h2> <!--| -> pipes para cmabiar moneda-->
+<p>{{ product.title | reverse }}</p><!--| -> pipes para cmabiar el orden de las letrasnpm-->
+<button (click)="onAddToCart()">Add cart</button>

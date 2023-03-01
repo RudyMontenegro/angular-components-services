@@ -1,0 +1,29 @@
+<p>
+    La cantidad {{ myShoppingCart.length }}  <!--Imprimir el numero de productos en el carrito -->
+</p>
+<p>
+    Este es = {{stringTochage | changeLetToNum}}
+</p>
+<p>
+    Precio Tota: $ {{total}}
+</p>
+<p>
+    Today: {{ today | date: 'full'}}
+</p>
+<p>
+    Ago: {{ date | timeAgo }}
+</p>
+<p>
+    Date : {{ date | date: 'shortDate' }} <!-- Pipe de fecha https://angular.io/api/common/DatePipe -->
+</p>
+<p>
+    {{ 'hOLA BasCVASas asASA' | uppercase }}
+  </p>
+<div class="products--grid">
+    <app-product [productCh]="product"
+     *ngFor="let product of products"
+     (addedProduct)="onAddToShoppingCart($event)" 
+    
+     ></app-product> <!--  (addedProduct) Valor que viene del hijo.
+        "onAddToShoppingCart" Llama a método que está en .ts de este componente padre.  -->
+</div>
